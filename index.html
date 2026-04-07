@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>釜山旅のしおり 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root { --pk:#F9C5D1; --pkl:#FEF3F6; --pkm:#F4A7B9; --pkd:#D9708A; --dk:#2A1A1F; --mt:#9A7A82; --bd:rgba(249,197,209,.5) }
+* { margin:0; padding:0; box-sizing:border-box }
+html { scroll-behavior:smooth }
+body { background:var(--pkl); color:var(--dk); font-family:'Noto Serif JP',serif; line-height:1.8 }
+
+.hero { min-height:100vh; background:linear-gradient(150deg,#fff5f8 0%,#fde0e9 50%,#f9c5d1 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 24px 60px; position:relative; overflow:hidden }
+.hc { position:absolute; border-radius:50%; pointer-events:none }
+.hc1 { width:500px; height:500px; top:-180px; left:-160px; background:rgba(249,197,209,.22) }
+.hc2 { width:320px; height:320px; bottom:-100px; right:-80px; background:rgba(244,167,185,.18) }
+.hero-flag { font-size:60px; margin-bottom:20px; animation:float 4s ease-in-out infinite; position:relative; z-index:1 }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.eyebrow { font-family:'Noto Sans KR',sans-serif; font-size:10px; letter-spacing:6px; color:var(--pkd); text-transform:uppercase; margin-bottom:14px; position:relative; z-index:1 }
+.hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(52px,13vw,96px); font-weight:600; line-height:1.05; margin-bottom:6px; position:relative; z-index:1 }
+.hero h1 em { font-style:italic; color:var(--pkd) }
+.hero-sub { font-size:13px; color:var(--mt); margin-bottom:36px; font-weight:300; letter-spacing:2px; position:relative; z-index:1 }
+.badges { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1 }
+.badge { background:white; border:1px solid var(--pk); border-radius:40px; padding:8px 18px; font-size:12px; color:var(--dk); box-shadow:0 2px 16px rgba(249,197,209,.35); text-decoration:none; cursor:pointer; transition:transform .2s,box-shadow .2s }
+.badge:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(249,197,209,.55) }
+.scroll-hint { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); font-size:10px; color:var(--mt); letter-spacing:4px; animation:bounce 2s ease-in-out infinite; z-index:1 }
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(7px)} }
+
+.sec { padding:64px 24px; max-width:700px; margin:0 auto }
+.lbl { font-family:'Noto Sans KR',sans-serif; font-size:10px; letter-spacing:5px; color:var(--pkd); text-transform:uppercase; margin-bottom:10px }
+.ttl { font-family:'Cormorant Garamond',serif; font-size:clamp(26px,6vw,42px); font-weight:600; color:var(--dk); margin-bottom:28px; line-height:1.2 }
+.ttl em { font-style:italic; color:var(--pkd) }
+.divider { text-align:center; padding:8px 0; color:var(--pkm); font-size:18px; letter-spacing:10px }
+
+.alert { background:white; border:1.5px solid var(--pkd); border-radius:16px; padding:20px 22px; margin-bottom:24px; box-shadow:0 4px 20px rgba(217,112,138,.1) }
+.alert-head { font-size:14px; font-weight:500; color:var(--pkd); margin-bottom:10px }
+.alert ul { font-size:12px; color:var(--mt); padding-left:16px; line-height:2.2 }
+.alert ul strong { color:var(--dk) }
+
+.fc { background:white; border-radius:20px; padding:22px; margin-bottom:12px; box-shadow:0 4px 24px rgba(249,197,209,.3); border:1px solid var(--bd); display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:12px }
+.fe { text-align:center }
+.fe .ap { font-size:10px; color:var(--mt); letter-spacing:2px; margin-bottom:4px }
+.fe .tm { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:var(--dk) }
+.fe .dt { font-size:11px; color:var(--pkd); margin-top:4px }
+.fm { text-align:center }
+.fm .pl { font-size:20px; margin-bottom:4px }
+.fm .ln { width:50px; height:1px; background:linear-gradient(to right,var(--pk),var(--pkd),var(--pk)); margin:0 auto }
+
+.dc { background:white; border-radius:24px; overflow:hidden; margin-bottom:20px; box-shadow:0 4px 32px rgba(249,197,209,.22); border:1px solid var(--bd) }
+.dh { padding:20px 24px; display:flex; align-items:center; gap:16px }
+.dh.d1 { background:linear-gradient(135deg,#f9c5d1,#f4a7b9) }
+.dh.d2 { background:linear-gradient(135deg,#f0b3c4,#e88ea8) }
+.dh.d3 { background:linear-gradient(135deg,#e8a0b4,#d9708a) }
+.dn { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:600; color:white; line-height:1; opacity:.9 }
+.dm h3 { font-size:15px; font-weight:500; color:white; margin-bottom:2px }
+.dm p { font-size:11px; color:rgba(255,255,255,.78); font-weight:300 }
+
+.si { display:flex; padding:14px 24px; gap:14px; align-items:flex-start; border-bottom:1px solid var(--pkl); transition:background .2s }
+.si:last-child { border-bottom:none }
+.si:hover { background:var(--pkl) }
+.s-time { font-family:'Noto Sans KR',sans-serif; font-size:11px; color:var(--pkd); min-width:52px; padding-top:3px; letter-spacing:1px }
+.s-dot { width:8px; height:8px; border-radius:50%; background:var(--pk); border:2px solid var(--pkd); margin-top:5px; flex-shrink:0 }
+.s-body { flex:1 }
+.s-title { font-size:14px; font-weight:500; color:var(--dk); margin-bottom:2px }
+.s-desc { font-size:12px; color:var(--mt); line-height:1.6; font-weight:300 }
+.tag { display:inline-block; background:var(--pkl); color:var(--pkd); font-size:10px; padding:2px 10px; border-radius:20px; margin-top:4px; font-family:'Noto Sans KR',sans-serif; border:1px solid var(--pk); margin-right:4px }
+.tag.w { background:#fff8f0; color:#c0804a; border-color:#f0c08a }
+
+.sky-box { background:linear-gradient(135deg,#fff0f5,#fde4ec); border:1.5px solid var(--pk); border-radius:12px; padding:14px 16px; margin:8px 0 4px }
+.sky-box h4 { font-size:11px; font-weight:500; color:var(--pkd); margin-bottom:6px; letter-spacing:1px }
+.sky-box ul { font-size:11px; color:var(--mt); padding-left:14px; line-height:2 }
+
+.cafe-list { display:flex; flex-direction:column; gap:12px }
+.cafe-item { background:white; border-radius:14px; padding:16px 18px; border:1px solid var(--bd); box-shadow:0 2px 12px rgba(249,197,209,.15); display:flex; gap:14px; align-items:flex-start }
+.cafe-em { font-size:24px; flex-shrink:0; margin-top:2px }
+.cafe-area { font-family:'Noto Sans KR',sans-serif; font-size:10px; color:var(--pkd); margin-bottom:2px; letter-spacing:1px }
+.cafe-name { font-size:14px; font-weight:500; color:var(--dk); margin-bottom:4px }
+.cafe-desc { font-size:12px; color:var(--mt); line-height:1.6; font-weight:300 }
+
+.g-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.g-item { background:white; border-radius:16px; padding:18px 14px; text-align:center; border:1px solid var(--bd); box-shadow:0 2px 12px rgba(249,197,209,.15); transition:transform .2s,box-shadow .2s }
+.g-item:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(249,197,209,.35) }
+.g-em { font-size:28px; margin-bottom:8px }
+.g-name { font-size:13px; font-weight:500; color:var(--dk); margin-bottom:2px }
+.g-kr { font-family:'Noto Sans KR',sans-serif; font-size:11px; color:var(--pkd); margin-bottom:4px }
+.g-desc { font-size:11px; color:var(--mt); line-height:1.5; font-weight:300 }
+
+.tips-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.tip { background:white; border-radius:14px; padding:18px; border:1px solid var(--bd); box-shadow:0 2px 12px rgba(249,197,209,.15) }
+.tip-icon { font-size:22px; margin-bottom:8px }
+.tip h4 { font-size:13px; font-weight:500; color:var(--dk); margin-bottom:5px }
+.tip p { font-size:11px; color:var(--mt); line-height:1.6; font-weight:300 }
+
+footer { background:var(--dk); color:rgba(255,255,255,.45); text-align:center; padding:56px 24px }
+footer .ff { font-size:34px; margin-bottom:14px }
+footer h3 { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; color:var(--pk); margin-bottom:8px }
+footer p { font-size:11px; letter-spacing:2px }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hc hc1"></div>
+  <div class="hc hc2"></div>
+  <div class="hero-flag">&#x1F1F0;&#x1F1F7;</div>
+  <p class="eyebrow">Busan Trip 2025</p>
+  <h1>釜山<br><em>旅のしおり</em></h1>
+  <p class="hero-sub">2025.4.9 wed &mdash; 4.11 fri &nbsp;/&nbsp; 30代女子3名</p>
+  <div class="badges">
+    <a href="#flight" class="badge">&#x2708;&#xFE0F; 成田発着</a>
+    <a href="#skycapsule" class="badge">&#x1F3A1; スカイカプセル</a>
+    <a href="#cafe" class="badge">&#x2615; カフェ作業</a>
+    <a href="#gourmet" class="badge">&#x1F35C; 食べ歩き</a>
+    <a href="#stay" class="badge">&#x1F3E8; 海雲台ステイ</a>
+  </div>
+  <p class="scroll-hint">&#x2193; scroll</p>
+</section>
+
+<!-- SKYCAPSULE ALERT -->
+<div id="skycapsule" class="sec" style="padding-bottom:0">
+  <p class="lbl">Important</p>
+  <h2 class="ttl">スカイカプセル<em>攻略</em></h2>
+  <div class="alert">
+    <div class="alert-head">&#x26A0;&#xFE0F; 当日券をゲットするコツ</div>
+    <ul>
+      <li>営業開始 <strong>9:00〜</strong>（4月は〜18:00）。<strong>開場と同時に券売機へ</strong>が鉄則！</li>
+      <li>当日券は<strong>午前中に売り切れる日が多い</strong>。遅くても10時台までに到着を</li>
+      <li>券売機は<strong>日本語あり・日本クレカOK</strong>。スタッフ窓口でも購入可</li>
+      <li>3名 &#x2192; <strong>3人乗りカプセル 片道39,000ウォン</strong>（約4,300円）で1台OK</li>
+      <li>ミポ駅 &#x2194; チョンサポ駅 約30分の絶景ライド。帰りは<strong>海辺列車</strong>もセットでおすすめ</li>
+      <li>万が一売り切れ &#x2192; KKday / Klookのキャンセル席を旅行2〜3日前にこまめにチェック</li>
+    </ul>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- FLIGHT -->
+<div id="flight" class="sec">
+  <p class="lbl">Flight Info</p>
+  <h2 class="ttl">フライト<em>情報</em></h2>
+  <div class="fc">
+    <div class="fe"><div class="ap">NRT 成田</div><div class="tm">10:30</div><div class="dt">4月9日（水）出発</div></div>
+    <div class="fm"><div class="pl">&#x2708;&#xFE0F;</div><div class="ln"></div></div>
+    <div class="fe"><div class="ap">PUS 釜山</div><div class="tm">12:55</div><div class="dt">金海国際空港 着</div></div>
+  </div>
+  <div class="fc">
+    <div class="fe"><div class="ap">PUS 釜山</div><div class="tm">14:00</div><div class="dt">4月11日（金）出発</div></div>
+    <div class="fm"><div class="pl">&#x2708;&#xFE0F;</div><div class="ln"></div></div>
+    <div class="fe"><div class="ap">NRT 成田</div><div class="tm">16:10</div><div class="dt">成田空港 着</div></div>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- HOTEL -->
+<div id="stay" class="sec">
+  <p class="lbl">Stay</p>
+  <h2 class="ttl">宿泊<em>ホテル</em></h2>
+  <div class="alert" style="padding:0;overflow:hidden;">
+    <img src="hotel.png" alt="ELBON the stay, Haeundae" style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;">
+    <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;">
+      <div style="font-size:32px;flex-shrink:0;">&#x1F3E8;</div>
+      <div>
+        <div class="alert-head" style="font-size:15px;">ELBON the stay, Haeundae</div>
+        <div style="font-size:12px;color:var(--mt);line-height:2;">
+          1381-5 Jung-dong, Haeundae<br>
+          Busan 612-010, KOREA<br>
+          <span style="color:var(--pkd);">&#x1F4CD; 海雲台エリア</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- SCHEDULE -->
+<div class="sec">
+  <p class="lbl">Schedule</p>
+  <h2 class="ttl">3日間の<em>旅程</em></h2>
+
+  <!-- DAY 1 -->
+  <div class="dc">
+    <div class="dh d1">
+      <div class="dn">01</div>
+      <div class="dm"><h3>4月9日（水）到着・夜グルメ</h3><p>海雲台ホテルへ。BIFF広場 &#x26; 南浦洞へ</p></div>
+    </div>
+    <div class="si"><div class="s-time">10:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x2708;&#xFE0F; 成田空港 出発</div><div class="s-desc">集合・搭乗。いよいよ釜山へ！</div></div></div>
+    <div class="si"><div class="s-time">12:55</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F6EC; 金海国際空港 到着</div><div class="s-desc">入国審査・両替。地下鉄または空港バスで海雲台へ（約40分）</div><span class="tag">移動 約40分</span></div></div>
+    <div class="si"><div class="s-time">16:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F3E8; ホテル チェックイン</div><div class="s-desc">ELBON the stay, Haeundae へ。荷物を置いて身軽に出発！</div></div></div>
+    <div class="si"><div class="s-time">17:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F95F; BIFF広場 食べ歩き</div><div class="s-desc">ホットク・オデン・チャプチェ。釜山グルメの入口はここ！</div><span class="tag">食べ歩き必須</span></div></div>
+    <div class="si"><div class="s-time">18:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F980; 夕食｜カンジャンケジャン</div><div class="s-desc">釜山名物の生醤油漬けカニ。ご飯が止まらない！</div><span class="tag w">要予約</span></div></div>
+    <div class="si"><div class="s-time">20:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F37A; 南浦洞でマッコリ乾杯</div><div class="s-desc">チャミスル・マッコリで初日の夜を楽しもう&#x2728;</div></div></div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="dc">
+    <div class="dh d2">
+      <div class="dn">02</div>
+      <div class="dm"><h3>4月10日（木）スカイカプセル &#x26; 作業day</h3><p>海雲台→広安里→西面。メインイベントの日！</p></div>
+    </div>
+    <div class="si"><div class="s-time">07:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F373; 朝食｜テジクッパ</div><div class="s-desc">釜山名物の豚骨スープ。朝からがっつりエネルギーチャージ！</div></div></div>
+    <div class="si"><div class="s-time">09:00</div><div class="s-dot"></div><div class="s-body">
+      <div class="s-title">&#x1F3A1; 海雲台ブルーラインパーク</div>
+      <div class="s-desc">開場と同時に当日券を購入！3人乗りカプセルで海上を30分絶景ライド&#x2728;</div>
+      <div class="sky-box">
+        <h4>&#x1F3AB; 当日券 購入ポイント</h4>
+        <ul>
+          <li>9:00開場と同時に券売機へ（日本語あり・日本クレカOK）</li>
+          <li>3人乗り片道 39,000ウォン（約4,300円）で1台OK</li>
+          <li>ミポ駅 &#x2192; チョンサポ駅 約30分の絶景ライド</li>
+          <li>乗車後は青沙浦タリットル展望台も立ち寄り必須！</li>
+        </ul>
+      </div>
+      <span class="tag w">&#x26A0;&#xFE0F; 午前中に売切れ注意</span>
+    </div></div>
+    <div class="si"><div class="s-time">11:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F682; 海辺列車でのんびり帰り</div><div class="s-desc">帰りは全席海側向きのレトロな海辺列車で。スカイカプセルとのセット券がお得</div><span class="tag">セットがお得</span></div></div>
+    <div class="si"><div class="s-time">12:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F99E; 昼食｜海雲台市場の海鮮</div><div class="s-desc">活ウニ・タコ・貝など新鮮な海の幸。刺身定食もおすすめ！</div><span class="tag">超新鮮</span></div></div>
+    <div class="si"><div class="s-time">14:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x2615; カフェ作業タイム｜広安里</div><div class="s-desc">広安大橋を望むオーシャンビューカフェで作業タイム。Wi-Fi完備の店が多い</div><span class="tag">作業向けカフェ</span></div></div>
+    <div class="si"><div class="s-time">17:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F6CD;&#xFE0F; 西面 ショッピング</div><div class="s-desc">OLIVE YOUNG・コスメ・ファッション。お土産まとめ買いもここで！</div><span class="tag">OLIVE YOUNG必訪</span></div></div>
+    <div class="si"><div class="s-time">19:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F969; 夕食｜サムギョプサル</div><div class="s-desc">西面の焼肉通りで厚切りサムギョプサル。締めはテンジャンチゲで</div></div></div>
+    <div class="si"><div class="s-time">21:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F309; 広安里 夜景散歩</div><div class="s-desc">ライトアップされた広安大橋が幻想的。ビール片手に最高の夜を</div></div></div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="dc">
+    <div class="dh d3">
+      <div class="dn">03</div>
+      <div class="dm"><h3>4月11日（金）最終日・帰国</h3><p>朝カフェ作業 &#x2192; お土産 &#x2192; 14:00フライト</p></div>
+    </div>
+    <div class="si"><div class="s-time">08:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F35C; 朝食｜ミルミョン</div><div class="s-desc">釜山名物の小麦麺。あっさりとした朝食に最適</div></div></div>
+    <div class="si"><div class="s-time">09:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x2615; 朝カフェ作業タイム</div><div class="s-desc">静かな朝の時間にさくっと作業を片付けよう。最後の釜山カフェタイム</div><span class="tag">最後のカフェ</span></div></div>
+    <div class="si"><div class="s-time">10:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F6CD;&#xFE0F; 最後のお土産購入</div><div class="s-desc">コスメ・のり・辛ラーメン・お菓子などまとめ買い</div><span class="tag">OLIVE YOUNG / 免税店</span></div></div>
+    <div class="si"><div class="s-time">11:30</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x1F68C; 空港へ移動</div><div class="s-desc">金海国際空港へ。地下鉄またはリムジンバスで約40分。余裕を持って早めに！</div><span class="tag w">&#x26A0;&#xFE0F; 早めに出発</span></div></div>
+    <div class="si"><div class="s-time">14:00</div><div class="s-dot"></div><div class="s-body"><div class="s-title">&#x2708;&#xFE0F; 釜山 出発・帰国</div><div class="s-desc">最高の釜山旅、また来ようね&#x1F1F0;&#x1F1F7;</div></div></div>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- CAFE -->
+<div id="cafe" class="sec">
+  <p class="lbl">Cafe &amp; Work</p>
+  <h2 class="ttl">作業できる<em>おすすめカフェ</em></h2>
+  <div class="cafe-list">
+    <div class="cafe-item"><div class="cafe-em">&#x1F30A;</div><div><div class="cafe-area">広安里エリア</div><div class="cafe-name">オーシャンビューカフェ各種</div><div class="cafe-desc">広安大橋を望む絶景カフェが並ぶ。Wi-Fi完備・コンセントあり・長居OK。午後の作業に最適</div></div></div>
+    <div class="cafe-item"><div class="cafe-em">&#x1F3D8;</div><div><div class="cafe-area">海雲台エリア</div><div class="cafe-name">달맞이길（タルマジキル）沿いカフェ</div><div class="cafe-desc">スカイカプセル周辺のおしゃれカフェ通り。ゆったりした雰囲気で作業にもぴったり</div></div></div>
+    <div class="cafe-item"><div class="cafe-em">&#x1F3D9;</div><div><div class="cafe-area">西面エリア</div><div class="cafe-name">スタバ・メガコーヒー・ポールバセット</div><div class="cafe-desc">チェーン系は安定のWi-Fi・コンセント環境。ショッピングの合間にさくっと作業できる</div></div></div>
+    <div class="cafe-item"><div class="cafe-em">&#x2600;&#xFE0F;</div><div><div class="cafe-area">南浦洞エリア</div><div class="cafe-name">골목 카페（路地裏カフェ）</div><div class="cafe-desc">BIFF広場周辺の路地にあるローカルカフェ。静かで落ち着いた雰囲気。朝カフェにおすすめ</div></div></div>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- GOURMET -->
+<div id="gourmet" class="sec">
+  <p class="lbl">Gourmet</p>
+  <h2 class="ttl">絶対食べたい<em>釜山グルメ</em></h2>
+  <div class="g-grid">
+    <div class="g-item"><div class="g-em">&#x1F980;</div><div class="g-name">カンジャンケジャン</div><div class="g-kr">간장게장</div><div class="g-desc">醤油漬けカニ。ご飯泥棒の代表格</div></div>
+    <div class="g-item"><div class="g-em">&#x1F969;</div><div class="g-name">サムギョプサル</div><div class="g-kr">삼겹살</div><div class="g-desc">厚切り豚バラを炭火で。韓国定番</div></div>
+    <div class="g-item"><div class="g-em">&#x1F35C;</div><div class="g-name">テジクッパ</div><div class="g-kr">돼지국밥</div><div class="g-desc">豚骨スープ。釜山の朝ごはん</div></div>
+    <div class="g-item"><div class="g-em">&#x1F95F;</div><div class="g-name">ホットク</div><div class="g-kr">호떡</div><div class="g-desc">はちみつ入り揚げパン。BIFF広場で</div></div>
+    <div class="g-item"><div class="g-em">&#x1F99E;</div><div class="g-name">海鮮刺身</div><div class="g-kr">회</div><div class="g-desc">海雲台市場の新鮮な海の幸</div></div>
+    <div class="g-item"><div class="g-em">&#x1F35C;</div><div class="g-name">ミルミョン</div><div class="g-kr">밀면</div><div class="g-desc">釜山発祥の小麦麺。さっぱり系</div></div>
+  </div>
+</div>
+
+<div class="divider">&#xB7; &#xB7; &#xB7;</div>
+
+<!-- TIPS -->
+<div class="sec">
+  <p class="lbl">Tips</p>
+  <h2 class="ttl">旅の<em>ヒント</em></h2>
+  <div class="tips-grid">
+    <div class="tip"><div class="tip-icon">&#x1F4B3;</div><h4>両替</h4><p>空港より市内・南浦洞の両替所がレートGood。クレカ払いも多くの店で使える</p></div>
+    <div class="tip"><div class="tip-icon">&#x1F687;</div><h4>交通</h4><p>T-moneyカードが便利。空港&#x2192;海雲台は地下鉄2号線直通またはリムジンバス（約40分）</p></div>
+    <div class="tip"><div class="tip-icon">&#x1F4F1;</div><h4>アプリ</h4><p>NaverマップとGoogle翻訳は必須。韓国SIMかポケットWiFiを事前に準備して</p></div>
+    <div class="tip"><div class="tip-icon">&#x1F338;</div><h4>4月の天気</h4><p>昼は15〜18℃、朝晩は肌寒い。薄手のアウター持参を忘れずに</p></div>
+    <div class="tip"><div class="tip-icon">&#x1F37D;&#xFE0F;</div><h4>レストラン予約</h4><p>人気店はNaverグルメで予約可。カンジャンケジャンは事前予約必須</p></div>
+    <div class="tip"><div class="tip-icon">&#x1F6CD;&#xFE0F;</div><h4>お土産</h4><p>OLIVE YOUNGのコスメ・のり・辛ラーメン・チョコパイ。帰りの空港免税店も活用</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ff">&#x1F1F0;&#x1F1F7;</div>
+  <h3>Busan Trip 2025</h3>
+  <p>4.9 wed &mdash; 4.11 fri &nbsp;/&nbsp; 楽しい旅になりますように &#x2728;</p>
+</footer>
+
+</body>
+</html>
